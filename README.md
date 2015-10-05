@@ -75,8 +75,11 @@ Building index for Idotea.fastq in memory using ropebwt
 #Mapping short reads with bwa:
 
 >../bwa/bwa index -p Idotea -a is L1000.fasta
+
 >../bwa/bwa aln -n 0.005 -k 5 -t 16 Idotea 5_150827_AC7GAYANXX_P2038_201_1.fastq > Idotea_pairs1.sai
+
 >../bwa/bwa aln -n 0.005 -k 5 -t 16 Idotea 5_150827_AC7GAYANXX_P2038_201_2.fastq > Idotea_pairs2.sai
+
 >../bwa/bwa sampe -a 750 -r '@RG\tID:Idotea\tSM:Idotea\tPL:Illumina' -P Idotea Idotea_pairs1.sai Idotea_pairs2.sai 5_150827_AC7GAYANXX_P2038_201_1.fastq 5_150827_AC7GAYANXX_P2038_201_2.fastq > Idotea_pairs.sam
 
 -------------------------------------------------------------------
