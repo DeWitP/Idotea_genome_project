@@ -1,12 +1,14 @@
 # Idotea_genome_project
-# In this file, I list commands I have used in the analysis of the Idotea genome sequence data.
+### In this file, I list commands I have used in the analysis of the Idotea genome sequence data.
 
-# This first section deals with the 300 bp insert size library produced in September 2015. All analyses were performed in the high_mem node of Albiorix. 
+## This first section deals with the 300 bp insert size library produced in September 2015. All analyses were performed in the high_mem node of Albiorix. 
 
 ---------------------------------------
-# First, production of preQC report:
+## First, production of preQC report:
 
 >sga preprocess --pe-mode 1 5_150827_AC7GAYANXX_P2038_201_1.fastq 5_150827_AC7GAYANXX_P2038_201_2.fastq > Idotea.fastq
+
+Output of the software:
 
 Parameters:
 QualTrim: 0
@@ -44,33 +46,40 @@ Building index for Idotea.fastq in memory using ropebwt
 
 >sga-preqc-report.py Idotea.preqc /usr/local/bin/SGA-0.10.13/src/examples/preqc/*.preqc
 
+### The finished preQC report is here: (https://github.com/DeWitP/Idotea_genome_project/blob/master/preqc_report_Idotea.pdf)
 --------------------------------------
 
-# Then, producing a de novo assembly using SOAP.
+## Then, producing a de novo assembly using SOAP.
 
-#Running SOAPdenovo assembly with parameters based on the preQC data (K-mer length 45)
+### Running SOAPdenovo assembly with parameters based on the preQC data (K-mer length 45)
 
 >SOAPdenovo-63mer all -s assembly_0001.config -K 45 -p 16 -R -o Idotea_assembly 1>assembly.log 2>assembly.err
 
-#Rerunning assembly with minContigLength 200, kmer length 57.
+### Statistics for the first assembly are here: (https://github.com/DeWitP/Idotea_genome_project/blob/master/Idotea_assembly_(k%3D45).scafStatistics)
+
+### Rerunning assembly with minContigLength 200, kmer length 57.
 
 >SOAPdenovo-63mer all -s assembly_0001.config -K 57 -p 16 -L 200 -R -o Idotea_assembly_v2 1>assembly_v2.log 2>assembly_v2.err
 
-#Seems the minContigLength flag did NOTHING, need to prune out the very short contigs using Tomas' perl script:
+### Statistics for the second assembly are here: (https://github.com/DeWitP/Idotea_genome_project/blob/master/Idotea_assembly_v2_(k%3D57).scafStatistics)
+
+### Seems the minContigLength flag did NOTHING, need to prune out the very short contigs using Tomas' perl script:
 
 >prune_fasta.pl 200 250000 Idotea_assembly_v2.contig > Idotea_assembly_v2_pruned.fasta
 
 ---------------------------------------
 
-# To get an idea of contaminant sequences, BLASTing the 1000 longest contigs in the assembly:
+## To get an idea of contaminant sequences, BLASTing the 1000 longest contigs in the assembly:
 
-#Grabbing the longest 1000 contigs with tail (already sorted by length by SOAP):
+### Grabbing the longest 1000 contigs with tail (already sorted by length by SOAP):
 
 >tail -n 2000 Idotea_assembly_v2_pruned.fasta > L1000.fasta
 
-#BLASTxing the 1000 longest sequences against nr (only first 5000 bases, for speed):
+### BLASTxing the 1000 longest sequences against nr (only first 5000 bases, for speed):
 
 >blastx -query L1000.fasta -db /state/partition1/db/ncbi/nr -num_alignments 10 -num_threads 32 -query_loc 1-5000 -out L1000_BLASTx_to_nr_output.txt
+
+### A pie chart illustrating the results of the annotation can be found here: (https://github.com/DeWitP/Idotea_genome_project/blob/master/Longest_1000_contigs_annotation.png)
 
 #Mapping short reads with bwa:
 
@@ -81,6 +90,10 @@ Building index for Idotea.fastq in memory using ropebwt
 >../bwa/bwa aln -n 0.005 -k 5 -t 16 Idotea 5_150827_AC7GAYANXX_P2038_201_2.fastq > Idotea_pairs2.sai
 
 >../bwa/bwa sampe -a 750 -r '@RG\tID:Idotea\tSM:Idotea\tPL:Illumina' -P Idotea Idotea_pairs1.sai Idotea_pairs2.sai 5_150827_AC7GAYANXX_P2038_201_1.fastq 5_150827_AC7GAYANXX_P2038_201_2.fastq > Idotea_pairs.sam
+
+### A pie chart illustrating whoch group that readas mapped to is here : (https://github.com/DeWitP/Idotea_genome_project/blob/master/Longest_1000_contigs__mapped_reads.png)
+
+### And a comparison of the number of mapped reads/kb is here: (https://github.com/DeWitP/Idotea_genome_project/blob/master/Longest_1000_contigs_depth.png)
 
 -------------------------------------------------------------------
 
