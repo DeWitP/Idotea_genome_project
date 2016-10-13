@@ -66,4 +66,4 @@ Configfile can be found here:
 
 ### Now, 98.4 % of the RAD loci map to at least one position in the assembly. 
 
-###Next step will be to try to 
+###Next step will be to try to run the GATK varsion of the 2b-RAD pipeline (https://github.com/z0on/2bRAD_GATK) and see what the results are. 
