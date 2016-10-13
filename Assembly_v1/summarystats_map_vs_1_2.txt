@@ -1,0 +1,5 @@
+Filename	Total#Reads	NumContigsMatched	NumUnaligned	NumAligned	NumMultiAligned	NumSingleAligned	NumQualSingles	Wrongformat	PropQualAligned
+IB14FIS37_uniqueTags_minDP5_0mismatches_vs_1_2.sam	140375	77305	7051	133324	27708	105616	105616	17	0.752
+IB14FIS37_uniqueTags_minDP5_1mismatches_vs_1_2.sam	140375	68748	2249	138126	30827	107299	97267	26	0.693
+outlier_tags_0mismatches_vs_1_2.sam	39	26	6	33	7	26	26	0	0.667
+outlier_tags_1mismatches_vs_1_2.sam	39	26	2	37	8	29	27	0	0.692
