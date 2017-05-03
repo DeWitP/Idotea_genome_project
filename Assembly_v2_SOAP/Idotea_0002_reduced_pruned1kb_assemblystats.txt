@@ -1,0 +1,60 @@
+
+---------------- Information for assembly 'Idotea_0002_reduced_pruned1kb.fasta' ----------------
+
+                                   Assumed genome size (Mbp)    1000.00
+
+                                         Number of scaffolds     449016
+                                     Total size of scaffolds 1014061771
+  Total scaffold length as percentage of assumed genome size     101.4%
+                                            Longest scaffold    1235107
+                                           Shortest scaffold       1000
+                                 Number of scaffolds > 1K nt     448366  99.9%
+                                Number of scaffolds > 10K nt       5682   1.3%
+                               Number of scaffolds > 100K nt        218   0.0%
+                                 Number of scaffolds > 1M nt          2   0.0%
+                                Number of scaffolds > 10M nt          0   0.0%
+                                          Mean scaffold size       2258
+                                        Median scaffold size       1538
+                                         N50 scaffold length       2326
+                                          L50 scaffold count     100272
+                                        NG50 scaffold length       2360
+                                         LG50 scaffold count      97271
+              N50 scaffold - NG50 scaffold length difference         34
+                                                 scaffold %A      29.52
+                                                 scaffold %C      17.88
+                                                 scaffold %G      17.80
+                                                 scaffold %T      29.33
+                                                 scaffold %N       5.47
+                                         scaffold %non-ACGTN       0.00
+                             Number of scaffold non-ACGTN nt          0
+
+                Percentage of assembly in scaffolded contigs      73.4%
+              Percentage of assembly in unscaffolded contigs      26.6%
+                      Average number of contigs per scaffold        2.3
+Average length of break (>25 Ns) between contigs in scaffold         93
+
+                                           Number of contigs    1019257
+                              Number of contigs in scaffolds     857916
+                          Number of contigs not in scaffolds     161341
+                                       Total size of contigs  960704981
+                                              Longest contig     397305
+                                             Shortest contig        133
+                                   Number of contigs > 1K nt     335245  32.9%
+                                  Number of contigs > 10K nt       2755   0.3%
+                                 Number of contigs > 100K nt        105   0.0%
+                                   Number of contigs > 1M nt          0   0.0%
+                                  Number of contigs > 10M nt          0   0.0%
+                                            Mean contig size        943
+                                          Median contig size        617
+                                           N50 contig length       1344
+                                            L50 contig count     182501
+                                          NG50 contig length       1295
+                                           LG50 contig count     197395
+                  N50 contig - NG50 contig length difference         49
+                                                   contig %A      31.16
+                                                   contig %C      18.87
+                                                   contig %G      18.79
+                                                   contig %T      30.96
+                                                   contig %N       0.22
+                                           contig %non-ACGTN       0.00
+                               Number of contig non-ACGTN nt          0

@@ -1,0 +1,29 @@
+--------------------------------------------------------------------------------
+SUMMARY
+--------------------------------------------------------------------------------
+- Wed Dec 07 17:21:20 2016
+- [P6353_101]- commit hash = 0fde026
+- assembly checksum = 1,248,446,724,071,899,772
+--------------------------------------------------------------------------------
+INPUT
+- 690.03 M = READS = number of reads; ideal 800-1200 for human
+- 139.00 b = MEAN READ LEN = mean read length after trimming; ideal 140
+- 65.95 % = READ TWO Q30 = fraction of Q30 bases in read 2; ideal 75-85
+- 0.30 kb = MEDIAN INSERT = median insert size; ideal 0.35-0.40
+- 85.63 % = PROPER PAIRS = fraction of proper read pairs; ideal >=75
+- 10.20 kb = MOLECULE LEN = weighted mean molecule size; ideal 50-100
+- 0.00 kb = HETDIST = mean distance between heterozygous SNPs
+- 5.76 % = UNBAR = fraction of reads that are not barcoded
+- 574.00 = BARCODE N50 = N50 reads per barcode
+- 29.55 % = DUPS = fraction of reads that are duplicates
+- 17.19 % = PHASED = nonduplicate and phased reads; ideal 45-50
+--------------------------------------------------------------------------------
+OUTPUT
+- 2.11 K = LONG SCAFFOLDS = number of scaffolds >= 10 kb
+- 0.55 kb = EDGE N50 = N50 edge size
+- 12.77 kb = CONTIG N50 = N50 contig size
+- 0.00 Mb = PHASEBLOCK N50 = N50 phase block size
+- 0.02 Mb = SCAFFOLD N50 = N50 scaffold size
+- 0.01 Mb = SCAFFOLD N60 = N60 scaffold size
+- 0.04 Gb = ASSEMBLY SIZE = assembly size (only scaffolds >= 10 kb)
+--------------------------------------------------------------------------------

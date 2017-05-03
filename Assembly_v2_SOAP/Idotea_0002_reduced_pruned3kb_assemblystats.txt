@@ -1,0 +1,56 @@
+
+---------------- Information for assembly 'Idotea_0002_reduced_pruned3kb.fasta' ----------------
+
+                                   Assumed genome size (Mbp)    1000.00
+
+                                         Number of scaffolds      58710
+                                     Total size of scaffolds  398194453
+  Total scaffold length as percentage of assumed genome size      39.8%
+                                            Longest scaffold    1235107
+                                           Shortest scaffold       3000
+                                 Number of scaffolds > 1K nt      58710 100.0%
+                                Number of scaffolds > 10K nt       5682   9.7%
+                               Number of scaffolds > 100K nt        218   0.4%
+                                 Number of scaffolds > 1M nt          2   0.0%
+                                Number of scaffolds > 10M nt          0   0.0%
+                                          Mean scaffold size       6782
+                                        Median scaffold size       4182
+                                         N50 scaffold length       7034
+                                          L50 scaffold count      10876
+              N50 scaffold - NG50 scaffold length difference       7034
+                                                 scaffold %A      29.03
+                                                 scaffold %C      19.08
+                                                 scaffold %G      18.99
+                                                 scaffold %T      28.88
+                                                 scaffold %N       4.02
+                                         scaffold %non-ACGTN       0.00
+                             Number of scaffold non-ACGTN nt          0
+
+                Percentage of assembly in scaffolded contigs      87.8%
+              Percentage of assembly in unscaffolded contigs      12.2%
+                      Average number of contigs per scaffold        4.1
+Average length of break (>25 Ns) between contigs in scaffold         82
+
+                                           Number of contigs     242404
+                              Number of contigs in scaffolds     233391
+                          Number of contigs not in scaffolds       9013
+                                       Total size of contigs  383100944
+                                              Longest contig     397305
+                                             Shortest contig        133
+                                   Number of contigs > 1K nt      99048  40.9%
+                                  Number of contigs > 10K nt       2755   1.1%
+                                 Number of contigs > 100K nt        105   0.0%
+                                   Number of contigs > 1M nt          0   0.0%
+                                  Number of contigs > 10M nt          0   0.0%
+                                            Mean contig size       1580
+                                          Median contig size        748
+                                           N50 contig length       3154
+                                            L50 contig count      26925
+                  N50 contig - NG50 contig length difference       3154
+                                                   contig %A      30.17
+                                                   contig %C      19.83
+                                                   contig %G      19.74
+                                                   contig %T      30.02
+                                                   contig %N       0.24
+                                           contig %non-ACGTN       0.00
+                               Number of contig non-ACGTN nt          0
