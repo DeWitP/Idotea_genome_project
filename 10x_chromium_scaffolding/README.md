@@ -36,8 +36,11 @@ Where the BX:Z: tag is the 16 nucleotide barcode sequence. However, Arcs require
 ### Another problem is that the barcode sequence ends with "-1", which is not supported by Arcs. So, replacing the -1 with an extra nucleotide instead (different for the 4 samples, to allow mixing):
 
 >sed -i -E "s/([ATCG]+)-1$/\1A/" Sample1.ID_barcode.fastq
+
 >sed -i -E "s/([ATCG]+)-1$/\1T/" Sample2.ID_barcode.fastq
+
 >sed -i -E "s/([ATCG]+)-1$/\1C/" Sample3.ID_barcode.fastq
+
 >sed -i -E "s/([ATCG]+)-1$/\1G/" Sample4.ID_barcode.fastq
 
 Now, the identifier line is IDENTIFIER_BARCODE, with a 17 base barcode sequence. 
@@ -45,10 +48,15 @@ Now, the identifier line is IDENTIFIER_BARCODE, with a 17 base barcode sequence.
 ### Starting by mapping the 10x reads against the 1kb pruned assembly with bwa mem:
 
 >module load bwa/v0.7.13
+
 >bwa index Idotea_0002_reduced_pruned1kb.fasta
+
 >bwa mem -p -t 12 -C -R '@RG\tID:Sample1\tSM:Sample1' Idotea_0002_reduced_pruned1kb.fasta Sample1.barcoded.fastq > Sample1_vs_1kb.sam
+
 >bwa mem -p -t 12 -C -R '@RG\tID:Sample2\tSM:Sample2' Idotea_0002_reduced_pruned1kb.fasta Sample2.barcoded.fastq > Sample2_vs_1kb.sam
+
 >bwa mem -p -t 12 -C -R '@RG\tID:Sample3\tSM:Sample3' Idotea_0002_reduced_pruned1kb.fasta Sample3.barcoded.fastq > Sample3_vs_1kb.sam
+
 >bwa mem -p -t 12 -C -R '@RG\tID:Sample4\tSM:Sample4' Idotea_0002_reduced_pruned1kb.fasta Sample4.barcoded.fastq > Sample4_vs_1kb.sam
 
 ### Then, convert to bam and sort:
@@ -78,6 +86,7 @@ Sample4_vs_1kb.sorted.bam
 ## NOTE: Did this on DNA rather than Albiorix, as I couldn't get LINKS to work on Albiorix.
 
 >touch empty.fof
+
 >/usr/local/links_v1.8.5/LINKS -f Idotea_0002_reduced_pruned1kb.fasta -s empty.fof -k 20 -b Idotea_0002_reduced_pruned1kb.fasta.c2_e200_r0.05 -z 200 -d 2000 -l 1
 
 ### Needed to lower the parameter for min links used for scaffolding to 1, as no link was present more than once in the TSV file..
@@ -91,6 +100,7 @@ Statistics of the Assembly:
 ### Finally: Filling gaps using Sealer, using the original Illumina data (4 libraries, paired end).
 
 >module load Abyss/v2.0.2
+
 >abyss-sealer -v -j 14 -b40G -k90 -k80 -k70 -k60 -k50 -k40 -k30 -o Idotea_0002_reduced_pruned_arcs -S Idotea_0002_reduced_pruned_arcs.fasta ../*.fastq
 
 ### Final file called Idotea_0002_reduced_pruned_arcs_scaffold.fa 
