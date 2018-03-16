@@ -1,0 +1,54 @@
+<jellyProtocol>
+    <reference>/proj/data13/idotea/Ibalthica_latest_genome_assembly/Idotea_0002_reduced_pruned_arcs_scaffold.fa</reference>
+    <outputDir>/proj/data13/idotea/PBJelly/</outputDir>
+    <cluster>
+           <command>${CMD} ${JOBNAME} 2> ${STDERR} 1> ${STDOUT} &amp;</command>
+        <nJobs>2</nJobs>
+    </cluster>
+<blasr>-minMatch 8 -sdpTupleSize 8 -minPctIdentity 75 -bestn 1 -nCandidates 4 -maxScore -500 -nproc 16 -noSplitSubreads</blasr>
+    <input baseDir="/proj/data13/idotea/Idotea_PacBio/fasta/">
+        <job>myreads1.fasta</job>
+        <job>myreads2.fasta</job>
+        <job>myreads3.fasta</job>
+        <job>myreads4.fasta</job>
+        <job>myreads5.fasta</job>
+        <job>myreads6.fasta</job>
+        <job>myreads7.fasta</job>
+        <job>myreads8.fasta</job>
+        <job>myreads9.fasta</job>
+        <job>myreads10.fasta</job>
+        <job>myreads11.fasta</job>
+        <job>myreads12.fasta</job>
+        <job>myreads13.fasta</job>
+        <job>myreads14.fasta</job>
+        <job>myreads15.fasta</job>
+        <job>myreads16.fasta</job>
+        <job>myreads17.fasta</job>
+        <job>myreads18.fasta</job>
+        <job>myreads19.fasta</job>
+        <job>myreads20.fasta</job>
+        <job>myreads21.fasta</job>
+        <job>myreads22.fasta</job>
+        <job>myreads23.fasta</job>
+        <job>myreads24.fasta</job>
+        <job>myreads25.fasta</job>
+        <job>myreads26.fasta</job>
+        <job>myreads27.fasta</job>
+        <job>myreads28.fasta</job>
+        <job>myreads29.fasta</job>
+        <job>myreads30.fasta</job>
+        <job>myreads31.fasta</job>
+        <job>myreads32.fasta</job>
+        <job>myreads33.fasta</job>
+        <job>myreads34.fasta</job>
+        <job>myreads35.fasta</job>
+        <job>myreads36.fasta</job>
+        <job>myreads37.fasta</job>
+        <job>myreads38.fasta</job>
+        <job>myreads39.fasta</job>
+        <job>myreads40.fasta</job>
+        <job>myreads41.fasta</job>
+        <job>myreads42.fasta</job>
+        <job>myreads43.fasta</job>
+    </input>
+</jellyProtocol>

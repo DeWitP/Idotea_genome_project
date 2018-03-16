@@ -1,0 +1,59 @@
+---------------- Information for assembly 'jelly.out.1kb_trimmed.fasta' ----------------
+
+                                   Assumed genome size (Mbp)    1000.00
+
+                                         Number of scaffolds     342320
+                                     Total size of scaffolds 1538447615
+  Total scaffold length as percentage of assumed genome size     153.8%
+                                            Longest scaffold    1400145
+                                           Shortest scaffold       1000
+                                 Number of scaffolds > 1K nt     341986  99.9%
+                                Number of scaffolds > 10K nt      32905   9.6%
+                               Number of scaffolds > 100K nt        245   0.1%
+                                 Number of scaffolds > 1M nt          5   0.0%
+                                Number of scaffolds > 10M nt          0   0.0%
+                                          Mean scaffold size       4494
+                                        Median scaffold size       2264
+                                         N50 scaffold length       7798
+                                          L50 scaffold count      49731
+                                        NG50 scaffold length      12325
+                                         LG50 scaffold count      21964
+              N50 scaffold - NG50 scaffold length difference       4527
+                                                 scaffold %A      32.50
+                                                 scaffold %C      16.96
+                                                 scaffold %G      16.95
+                                                 scaffold %T      32.50
+                                                 scaffold %N       1.08
+                                         scaffold %non-ACGTN       0.00
+                             Number of scaffold non-ACGTN nt      71725
+
+                Percentage of assembly in scaffolded contigs      31.3%
+              Percentage of assembly in unscaffolded contigs      68.7%
+                      Average number of contigs per scaffold        1.4
+Average length of break (>25 Ns) between contigs in scaffold        124
+
+                                           Number of contigs     473131
+                              Number of contigs in scaffolds     230615
+                          Number of contigs not in scaffolds     242516
+                                       Total size of contigs 1522181401
+                                              Longest contig    1232569
+                                             Shortest contig        133
+                                   Number of contigs > 1K nt     328511  69.4%
+                                  Number of contigs > 10K nt      29616   6.3%
+                                 Number of contigs > 100K nt        221   0.0%
+                                   Number of contigs > 1M nt          4   0.0%
+                                  Number of contigs > 10M nt          0   0.0%
+                                            Mean contig size       3217
+                                          Median contig size       1429
+                                           N50 contig length       6928
+                                            L50 contig count      54900
+                                          NG50 contig length      10964
+                                           LG50 contig count      24672
+                  N50 contig - NG50 contig length difference       4036
+                                                   contig %A      32.84
+                                                   contig %C      17.14
+                                                   contig %G      17.13
+                                                   contig %T      32.85
+                                                   contig %N       0.03
+                                           contig %non-ACGTN       0.00
+                               Number of contig non-ACGTN nt      71725

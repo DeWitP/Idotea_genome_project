@@ -1,0 +1,7 @@
+#$ -cwd
+#$ -q Annotation-3
+#$ -S /bin/bash
+#$ -pe mpich 30
+
+module load Abyss/v2.0.2
+abyss-sealer -v -j 30 -b40G -k90 -k80 -k70 -k60 -k50 -k40 -k30 -o Idotea_PBJelly_ArcsRound2_sealed -S Idotea_PBJelly_ArcsRound2.fasta *.fastq

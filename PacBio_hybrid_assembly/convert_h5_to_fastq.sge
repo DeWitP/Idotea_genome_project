@@ -1,0 +1,48 @@
+#$ -cwd
+#$ -q node0
+#$ -S /bin/bash
+#$ -pe mpich 1
+
+bash5tools.py m170407_180127_42203_c101153852550000001823256107191783_s1_p0.bas.h5 --outFilePrefix myreads1 --outType fastq --readType unrolled
+bash5tools.py m170407_222023_42203_c101153852550000001823256107191784_s1_p0.bas.h5 --outFilePrefix myreads2 --outType fastq --readType unrolled
+bash5tools.py m170410_145837_42203_c101153772550000001823256107191793_s1_p0.bas.h5 --outFilePrefix myreads3 --outType fastq --readType unrolled
+bash5tools.py m170410_191725_42203_c101153772550000001823256107191794_s1_p0.bas.h5 --outFilePrefix myreads4 --outType fastq --readType unrolled
+bash5tools.py m170410_233638_42203_c101153772550000001823256107191795_s1_p0.bas.h5 --outFilePrefix myreads5 --outType fastq --readType unrolled
+bash5tools.py m170411_035551_42203_c101153772550000001823256107191796_s1_p0.bas.h5 --outFilePrefix myreads6 --outType fastq --readType unrolled
+bash5tools.py m170411_081522_42203_c101153772550000001823256107191797_s1_p0.bas.h5 --outFilePrefix myreads7 --outType fastq --readType unrolled
+bash5tools.py m170411_123426_42203_c101153922550000001823256107191780_s1_p0.bas.h5 --outFilePrefix myreads8 --outType fastq --readType unrolled
+bash5tools.py m170411_165752_42203_c101153922550000001823256107191781_s1_p0.bas.h5 --outFilePrefix myreads9 --outType fastq --readType unrolled
+bash5tools.py m170411_211335_42203_c101153922550000001823256107191782_s1_p0.bas.h5 --outFilePrefix myreads10 --outType fastq --readType unrolled
+bash5tools.py m170411_212420_42237_c101153842550000001823256107191793_s1_p0.bas.h5 --outFilePrefix myreads11 --outType fastq --readType unrolled
+bash5tools.py m170412_020655_42237_c101153842550000001823256107191794_s1_p0.bas.h5 --outFilePrefix myreads12 --outType fastq --readType unrolled
+bash5tools.py m170412_033957_42203_c101153922550000001823256107191783_s1_p0.bas.h5 --outFilePrefix myreads13 --outType fastq --readType unrolled
+bash5tools.py m170412_064935_42237_c101153842550000001823256107191795_s1_p0.bas.h5 --outFilePrefix myreads14 --outType fastq --readType unrolled
+bash5tools.py m170412_075724_42203_c101153922550000001823256107191784_s1_p0.bas.h5 --outFilePrefix myreads15 --outType fastq --readType unrolled
+bash5tools.py m170412_121656_42203_c101153922550000001823256107191785_s1_p0.bas.h5 --outFilePrefix myreads16 --outType fastq --readType unrolled
+bash5tools.py m170412_163550_42203_c101153922550000001823256107191786_s1_p0.bas.h5 --outFilePrefix myreads17 --outType fastq --readType unrolled
+bash5tools.py m170412_205503_42203_c101153922550000001823256107191787_s1_p0.bas.h5 --outFilePrefix myreads18 --outType fastq --readType unrolled
+bash5tools.py m170413_011423_42203_c101153902550000001823256107191700_s1_p0.bas.h5 --outFilePrefix myreads19 --outType fastq --readType unrolled
+bash5tools.py m170413_053745_42203_c101153902550000001823256107191701_s1_p0.bas.h5 --outFilePrefix myreads20 --outType fastq --readType unrolled
+bash5tools.py m170413_095634_42203_c101153902550000001823256107191702_s1_p0.bas.h5 --outFilePrefix myreads21 --outType fastq --readType unrolled
+bash5tools.py m170419_125454_42203_c101153732550000001823256107191730_s1_p0.bas.h5 --outFilePrefix myreads22 --outType fastq --readType unrolled
+bash5tools.py m170419_171239_42203_c101153732550000001823256107191731_s1_p0.bas.h5 --outFilePrefix myreads23 --outType fastq --readType unrolled
+bash5tools.py m170419_213501_42203_c101153732550000001823256107191732_s1_p0.bas.h5 --outFilePrefix myreads24 --outType fastq --readType unrolled
+bash5tools.py m170420_015438_42203_c101153732550000001823256107191733_s1_p0.bas.h5 --outFilePrefix myreads25 --outType fastq --readType unrolled
+bash5tools.py m170420_061403_42203_c101153732550000001823256107191734_s1_p0.bas.h5 --outFilePrefix myreads26 --outType fastq --readType unrolled
+bash5tools.py m170420_103423_42203_c101153732550000001823256107191735_s1_p0.bas.h5 --outFilePrefix myreads27 --outType fastq --readType unrolled
+bash5tools.py m170420_120522_42237_c101153442550000001823256107191714_s1_p0.bas.h5 --outFilePrefix myreads28 --outType fastq --readType unrolled
+bash5tools.py m170420_145953_42203_c101153732550000001823256107191736_s1_p0.bas.h5 --outFilePrefix myreads29 --outType fastq --readType unrolled
+bash5tools.py m170420_164954_42237_c101153442550000001823256107191715_s1_p0.bas.h5 --outFilePrefix myreads30 --outType fastq --readType unrolled
+bash5tools.py m170420_191951_42203_c101153732550000001823256107191737_s1_p0.bas.h5 --outFilePrefix myreads31 --outType fastq --readType unrolled
+bash5tools.py m170420_213646_42237_c101153442550000001823256107191716_s1_p0.bas.h5 --outFilePrefix myreads32 --outType fastq --readType unrolled
+bash5tools.py m170421_014714_42203_c101153902550000001823256107191703_s1_p0.bas.h5 --outFilePrefix myreads33 --outType fastq --readType unrolled
+bash5tools.py m170421_022035_42237_c101153442550000001823256107191717_s1_p0.bas.h5 --outFilePrefix myreads34 --outType fastq --readType unrolled
+bash5tools.py m170421_060645_42203_c101153902550000001823256107191704_s1_p0.bas.h5 --outFilePrefix myreads35 --outType fastq --readType unrolled
+bash5tools.py m170421_091230_42237_c101153842550000001823256107191796_s1_p0.bas.h5 --outFilePrefix myreads36 --outType fastq --readType unrolled
+bash5tools.py m170421_102651_42203_c101153902550000001823256107191705_s1_p0.bas.h5 --outFilePrefix myreads37 --outType fastq --readType unrolled
+bash5tools.py m170421_135722_42237_c101153842550000001823256107191797_s1_p0.bas.h5 --outFilePrefix myreads38 --outType fastq --readType unrolled
+bash5tools.py m170421_144734_42203_c101153902550000001823256107191706_s1_p0.bas.h5 --outFilePrefix myreads39 --outType fastq --readType unrolled
+bash5tools.py m170421_190827_42203_c101153902550000001823256107191707_s1_p0.bas.h5 --outFilePrefix myreads40 --outType fastq --readType unrolled
+bash5tools.py m170421_232859_42203_c101153962550000001823256107191740_s1_p0.bas.h5 --outFilePrefix myreads41 --outType fastq --readType unrolled
+bash5tools.py m170422_035150_42203_c101153962550000001823256107191741_s1_p0.bas.h5 --outFilePrefix myreads42 --outType fastq --readType unrolled
+bash5tools.py m170422_081130_42203_c101153962550000001823256107191742_s1_p0.bas.h5 --outFilePrefix myreads43 --outType fastq --readType unrolled

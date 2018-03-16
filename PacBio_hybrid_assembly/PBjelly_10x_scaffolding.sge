@@ -1,0 +1,84 @@
+#$ -cwd
+#$ -q Annotation-4
+#$ -S /bin/bash
+#$ -pe mpich 40
+
+# First, copy the input files to the local folder:
+cp /proj/data13/idotea/10x/fragScaff/inputfiles/Sample*.ID_barcode.fastq .
+
+#Then, modify the headers to make the file acceptable input for arcs:
+sed -i -E "s/([ATCG]+)-1$/\1A/" Sample1.ID_barcode.fastq
+sed -i -E "s/([ATCG]+)-1$/\1T/" Sample2.ID_barcode.fastq
+sed -i -E "s/([ATCG]+)-1$/\1C/" Sample3.ID_barcode.fastq
+sed -i -E "s/([ATCG]+)-1$/\1G/" Sample4.ID_barcode.fastq
+
+# Now, map to the genome sequence:
+
+module load bwa/v0.7.13
+bwa index Idotea_PBJelly.fasta
+bwa mem -p -t 40 -C -R '@RG\tID:Sample1\tSM:Sample1' Idotea_PBJelly.fasta Sample1.ID_barcode.fastq > Sample1_vs_PBJelly.sam
+bwa mem -p -t 40 -C -R '@RG\tID:Sample2\tSM:Sample2' Idotea_PBJelly.fasta Sample2.ID_barcode.fastq > Sample2_vs_PBJelly.sam
+bwa mem -p -t 40 -C -R '@RG\tID:Sample3\tSM:Sample3' Idotea_PBJelly.fasta Sample3.ID_barcode.fastq > Sample3_vs_PBJelly.sam
+bwa mem -p -t 40 -C -R '@RG\tID:Sample4\tSM:Sample4' Idotea_PBJelly.fasta Sample4.ID_barcode.fastq > Sample4_vs_PBJelly.sam
+
+# Convert to bam and sort BY READ ID:
+~/scripts/convert_to_bam_readsorted.sh
+
+# Now, we are ready to run ARCS:
+
+../arcs -f Idotea_PBJelly_1kbpruned.fasta -a samples.txt -s 95 -c 5 -l 0 -z 500 -m 10-50000 -d 0 -e 30000 -r 0.05 -i 17 -v 1
+
+# -----------------------------------------------
+# arcs options:
+# 
+#    -f  Assembled Sequences to further scaffold (Multi-Fasta format, required)
+#        NOTE: sequences must include a unique number (id) in the header
+# 					Idotea_0002_reduced_prunedXXXkb.fasta
+# 
+#    -a  File of File Names listing all input BAM alignment files (required). 
+#        NOTE: alignments must be sorted in order of name
+#              index must be included in read name in the format read1_indexA
+#              read name must include a number
+# 					XXXkb_samples.txt
+# 
+#    -s  Minimum sequence identity (min. required to include the read's scaffold alignment in the graph file, default: 98)
+# 			tried 98, 90
+# 			
+#    -c  Minimum number of mapping read pairs/Index required before creating edge in graph. (default: 5)
+# 			tried 5, 2
+# 
+#    -l  Minimum number of links to create edge in graph (default: 0)
+# 			tried 0
+# 
+#    -z  Minimum contig length to consider for scaffolding (default: 500)
+# 			tried 500, 200
+# 
+#    -b  Base name for your output files (optional)
+#  			
+#  
+#    -m  Range (in the format min-max) of index multiplicity (only reads with indices in this multiplicity range will be included in graph) (default: 50-1000)
+#  			tried 50-1000, 30-50000, 10-50000
+#  
+#    -d  Maximum degree of nodes in graph. All nodes with degree greater than this number will be removed from the graph prior to printing final graph. For no node removal, set to 0 (default: 0)
+#  			tried 0
+#  
+#    -e  Length (bp) of ends of read to consider (default: 30000)
+#  			tried 30000, 500
+#     
+#    -r  Maximum P-value for link orientation determination. Lower is more stringent (default: 0.05)
+#  			tried 0.05 TRY RAISING THIS NEXT??
+#  
+#    -i  Length (bp) of index sequence. 14 for GemCode, 16 for Chromium (default: 16)
+#  			tried 16, 18, 17    (17 works after modifying the index (example: CATTCGCTCTCGCTTG-1) replacing the -1 with a nucleotide instead (1-A, 2-T, 3-C, 4-G), which gives 17 nucleotides in barcode.
+#  
+#   -v  Runs in verbose mode (optional, default: 0)
+#			tried 1
+# -------------------------------------------
+
+../makeTSVfile.py Idotea_PBJelly_1kbpruned.fasta.scaff_s95_c5_l0_d0_e30000_r0.05_original.gv Idotea_PBJelly_1kbpruned.fasta.scaff_s95_c5_l0_d0_e30000_r0.05.tigpair_checkpoint.tsv Idotea_PBJelly_1kbpruned.fasta
+
+
+
+
+
+

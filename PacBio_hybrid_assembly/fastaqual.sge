@@ -1,0 +1,49 @@
+#$ -cwd
+#$ -q node0
+#$ -S /bin/bash
+#$ -pe mpich 1
+module load Qiime/v1.9.1
+
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads01.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads02.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads03.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads04.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads05.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads06.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads07.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads08.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads09.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads10.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads11.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads12.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads13.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads14.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads15.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads16.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads17.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads18.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads19.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads20.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads21.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads22.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads23.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads24.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads25.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads26.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads27.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads28.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads29.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads30.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads31.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads32.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads33.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads34.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads35.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads36.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads37.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads38.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads39.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads40.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads41.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads42.fastq -o fastaqual
+/usr/local/packages/Miniconda3_v.4.1.11/envs/qiime1/bin/convert_fastaqual_fastq.py -c fastq_to_fastaqual -f myreads43.fastq -o fastaqual

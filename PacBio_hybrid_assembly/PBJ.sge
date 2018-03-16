@@ -1,0 +1,13 @@
+#$ -cwd
+#$ -q Annotation-4
+#$ -S /bin/bash
+#$ -pe mpich 40
+
+module load PBJelly/v15.8.24
+source /usr/local/packages/PBSuite_15.8.24/setup.sh
+Jelly.py setup Ibalt_PBJelly_noclust.xml
+Jelly.py mapping Ibalt_PBJelly.xml
+Jelly.py support Ibalt_PBJelly.xml
+Jelly.py extraction Ibalt_PBJelly.xml
+Jelly.py assembly Ibalt_PBJelly.xml -x "-n 20 --tempDir ./tmp"
+Jelly.py output Ibalt_PBJelly.xml
