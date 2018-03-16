@@ -42,6 +42,7 @@ Using the submit script PBjelly_10x_scaffolding.sge
 # Adjusting the assembly using LINKS (Ran this on the DNA server instead as there were problems installing on Albiorix).
 
 touch empty.fof
+
 /usr/local/links_v1.8.5/LINKS -f Idotea_PBJelly_ArcsRound1.fasta -s empty.fof -k 20 -b Idotea_PBJelly_ArcsRound1.fasta.scaff_s95_c5_l0_d0_e30000_r0.05 -z 200 -d 2000 -l 1
 
 ## Ran arcs one more time, remapping the 10x data to the new assembly, and then scaffolding, but the output was identical to the input.
